@@ -11,7 +11,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
         InitializeComponent();
         this.WhenActivated(action =>
         {
-            if (ViewModel != null) 
+            if (ViewModel != null)
             {
                 action(ViewModel.ShowDialog.RegisterHandler(DoShowDialogAsync));
             }
